@@ -12,6 +12,8 @@ Note: The complete code will be released in the future.
 ## Model
 > The complete code will be released in the future.
 
+![SEMamba advanced model](imgs/SEMamba_advanced.png)
+
 ## ASR Word Error Rate
 We have tested the ASR results using OpenAI Whisper on the test set of VoiceBank-DEMAND.
 > The evaluation code will be released in the future.
