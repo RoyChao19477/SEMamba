@@ -12,13 +12,13 @@ Note: The complete code will be released in the future.
 ## Model
 > The complete code will be released in the future.
 
-![SEMamba advanced model](imgs/SEMamba_advanced.png)
+![SEMamba advanced model](imgs/SEMamba_advanced.jpg)
 
 ## ASR Word Error Rate
 We have tested the ASR results using OpenAI Whisper on the test set of VoiceBank-DEMAND.
 > The evaluation code will be released in the future.
 
-![VCTKDEMAND WER Results](imgs/vctk_wer.png)
+![VCTKDEMAND WER Results](imgs/vctk_wer.jpg)
 
 ## Evaluation
 The evaluation metrics is calculated via: [CMGAN](https://github.com/ruizhecao96/CMGAN/blob/main/src/tools/compute_metrics.py)  
