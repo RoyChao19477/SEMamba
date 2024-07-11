@@ -1,0 +1,7 @@
+packaging
+librosa
+soundfile
+pyyaml
+argparse
+tensorboard
+pesq
