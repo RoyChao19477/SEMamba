@@ -2,6 +2,16 @@
 This is the official implementation of the SEMamba paper.  
 For more details, please refer to: [An Investigation of Incorporating Mamba for Speech Enhancement](https://arxiv.org/abs/2405.06573)
 
+## Model
+
+![SEMamba advanced model](imgs/SEMamba_advanced.jpg)
+
+## ASR Word Error Rate
+We have tested the ASR results using OpenAI Whisper on the test set of VoiceBank-DEMAND.
+> The evaluation code will be released in the future.
+
+![VCTKDEMAND WER Results](imgs/vctk_wer.jpg)
+
 ## Requirement
     * Python >= 3.9
     * CUDA >= 12.0
@@ -77,16 +87,6 @@ There are two methods to implement the PCS (Perceptual Contrast Stretching) meth
 2. Use PCS as Post-Processing:
 - Run the `sh run.sh` with the yaml configuration `use_PCS400=False`.
 - Use the pretrained model `sh pretrained.sh` without post-processing `--post_processing_PCS True`.
-
-## Model
-
-![SEMamba advanced model](imgs/SEMamba_advanced.jpg)
-
-## ASR Word Error Rate
-We have tested the ASR results using OpenAI Whisper on the test set of VoiceBank-DEMAND.
-> The evaluation code will be released in the future.
-
-![VCTKDEMAND WER Results](imgs/vctk_wer.jpg)
 
 ## Evaluation
 The evaluation metrics is calculated via: [CMGAN](https://github.com/ruizhecao96/CMGAN/blob/main/src/tools/compute_metrics.py)  
