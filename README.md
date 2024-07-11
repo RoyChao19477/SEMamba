@@ -11,7 +11,7 @@ For more details, please refer to: [An Investigation of Incorporating Mamba for 
 
 1. Ensure that both the `nvidia-smi` and `nvcc -V` commands show CUDA version 12.0 or higher to verify proper installation and compatibility.
 
-2. Currently, it only supports RTX-series GPUs. Older GPU models, such as GTX 1080 Ti or Tesla V100, may not support the execution due to hardware limitations.
+2. Currently, it supports only GPUs from the RTX series and newer models. Older GPU models, such as GTX 1080 Ti or Tesla V100, may not support the execution due to hardware limitations.
 
 ## Installation
 ### (Suggested:) Step 0 - Create a Python environment with Conda
