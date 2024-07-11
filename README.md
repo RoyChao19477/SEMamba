@@ -50,7 +50,7 @@ Note: Installing from source (provided `mamba_install`) can help prevent package
 
 Create the dataset JSON file using the script `sh make_dataset.sh`. You may need to modify `make_dataset.sh` and `data/make_dataset_json.py`.
 
-Alternatively, you can directly modify the data paths in data/train_clean.json, data/train_noisy.json, etc.
+Alternatively, you can directly modify the data paths in `data/train_clean.json`, `data/train_noisy.json`, etc.
 
 ### Step 2: Run the following script to train the model.
 
