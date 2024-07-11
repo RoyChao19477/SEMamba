@@ -2,6 +2,11 @@
 This is the official implementation of the SEMamba paper.  
 For more details, please refer to: [An Investigation of Incorporating Mamba for Speech Enhancement](https://arxiv.org/abs/2405.06573)
 
+## Requirement
+    * Python >= 3.9
+    * CUDA >= 12.0
+    * PyTorch == 2.2.2
+
 ## Model
 
 ![SEMamba advanced model](imgs/SEMamba_advanced.jpg)
@@ -11,11 +16,6 @@ We have tested the ASR results using OpenAI Whisper on the test set of VoiceBank
 > The evaluation code will be released in the future.
 
 ![VCTKDEMAND WER Results](imgs/vctk_wer.jpg)
-
-## Requirement
-    * Python >= 3.9
-    * CUDA >= 12.0
-    * PyTorch == 2.2.2
 
 ## Additional Notes
 
