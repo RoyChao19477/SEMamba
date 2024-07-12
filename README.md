@@ -86,7 +86,7 @@ There are two methods to implement the PCS (Perceptual Contrast Stretching) meth
 
 2. Use PCS as Post-Processing:
 - Run the `sh run.sh` with the yaml configuration `use_PCS400=False`.
-- Use the pretrained model `sh pretrained.sh` without post-processing `--post_processing_PCS True`.
+- Use the pretrained model `sh pretrained.sh` with post-processing `--post_processing_PCS True`.
 
 ## Evaluation
 The evaluation metrics is calculated via: [CMGAN](https://github.com/ruizhecao96/CMGAN/blob/main/src/tools/compute_metrics.py)  
