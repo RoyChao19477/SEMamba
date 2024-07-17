@@ -52,6 +52,7 @@ def create_dataset(cfg, train=True, split=True, device='cuda:0'):
     clean_json = cfg['data_cfg']['train_clean_json'] if train else cfg['data_cfg']['valid_clean_json']
     noisy_json = cfg['data_cfg']['train_noisy_json'] if train else cfg['data_cfg']['valid_noisy_json']
     shuffle = (cfg['env_setting']['num_gpus'] <= 1) if train else False
+    pcs = cfg['training_cfg']['use_PCS400'] if train else False
     
     return VCTKDemandDataset(
         clean_json=clean_json,
@@ -66,7 +67,7 @@ def create_dataset(cfg, train=True, split=True, device='cuda:0'):
         n_cache_reuse=0,
         shuffle=shuffle,
         device=device,
-        pcs=cfg['training_cfg']['use_PCS400']
+        pcs=pcs
     )
 
 def create_dataloader(dataset, cfg, train=True):
