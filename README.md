@@ -11,6 +11,10 @@ For more details, please refer to: [An Investigation of Incorporating Mamba for 
 
 ![SEMamba advanced model](imgs/SEMamba_advanced.jpg)
 
+## Speech Enhancement Results
+VCTK-Demand
+![VCTKDEMAND Results](imgs/VCTK-Demand.png)
+
 ## ASR Word Error Rate
 We have tested the ASR results using OpenAI Whisper on the test set of VoiceBank-DEMAND.
 > The evaluation code will be released in the future.
