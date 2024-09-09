@@ -1,4 +1,4 @@
-# SEMamba
+# SEMamba (Accepted to IEEE SLT 2024)
 This is the official implementation of the SEMamba paper.  
 For more details, please refer to: [An Investigation of Incorporating Mamba for Speech Enhancement](https://arxiv.org/abs/2405.06573)
 
@@ -13,7 +13,7 @@ For more details, please refer to: [An Investigation of Incorporating Mamba for 
 
 ## Speech Enhancement Results
 VCTK-Demand
-![VCTKDEMAND Results](imgs/VCTK-Demand.png)
+![VCTKDEMAND_Results](imgs/VCTK-Demand.png)
 
 ## ASR Word Error Rate
 We have tested the ASR results using OpenAI Whisper on the test set of VoiceBank-DEMAND.
