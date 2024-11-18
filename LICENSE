@@ -1,18 +1,23 @@
 MIT License
 
 Copyright (c) 2024 RONG CHAO
+Portions of this software are Copyright (c) 2023 YXLU-0102 (Original MP-SENet)
+Portions of this software are Copyright (c) 2022 Ruizhe Cao (Original CMGAN)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
+of this software and associated documentation files (the “Software”), to deal
 in the Software without restriction, including without limitation the rights
 to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
+	1.	The above copyright notice, this permission notice, and the following
+acknowledgment shall be included in all copies or substantial portions of the Software:
+“This software is based on MP-SENet (https://github.com/yxlu-0102/MP-SENet)
+and CMGAN (https://github.com/ruizhecao96/CMGAN), which are licensed under the MIT license.”
+	2.	Redistributions in source code or binary form must retain the above copyright
+notice, this permission notice, and acknowledgment of MP-SENet and CMGAN’s contributions.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
