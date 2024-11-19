@@ -2,6 +2,8 @@
 This is the official implementation of the SEMamba paper.  
 For more details, please refer to: [An Investigation of Incorporating Mamba for Speech Enhancement](https://arxiv.org/abs/2405.06573)
 
+⚠️ **Notice**: Currently the default setting is Mamba-1 model structure. You can modify the `model/mamba_block.py` directly if you would like to try Mamba-2 model structure.
+
 ## Requirement
     * Python >= 3.9
     * CUDA >= 12.0

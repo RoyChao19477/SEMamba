@@ -8,10 +8,15 @@ from torch.nn.parameter import Parameter
 from functools import partial
 from einops import rearrange
 
-from mamba_ssm.modules.mamba_simple import Mamba, Block
-from mamba_ssm.models.mixer_seq_simple import _init_weights
-from mamba_ssm.ops.triton.layernorm import RMSNorm
+#from mamba_ssm.modules.mamba_simple import Mamba, Block
+from mamba_ssm import Mamba2
+from mamba_ssm.modules.block import Block
+#from mamba_ssm.models.mixer_seq_simple import _init_weights
+from mamba_ssm.models.mixer_seq_simple import _init_weights, create_block
+#from mamba_ssm.ops.triton.layernorm import RMSNorm
+from mamba_ssm.ops.triton.layer_norm import RMSNorm
 
+"""
 # github: https://github.com/state-spaces/mamba/blob/9127d1f47f367f5c9cc49c73ad73557089d02cb8/mamba_ssm/models/mixer_seq_simple.py
 def create_block(
     d_model, cfg, layer_idx=0, rms_norm=True, fused_add_norm=False, residual_in_fp32=False, 
@@ -21,31 +26,84 @@ def create_block(
     expand = cfg['model_cfg']['expand'] # 4
     norm_epsilon = cfg['model_cfg']['norm_epsilon'] # 0.00001
 
-    mixer_cls = partial(Mamba, layer_idx=layer_idx, d_state=d_state, d_conv=d_conv, expand=expand)
+    mixer_cls = partial(Mamba2, layer_idx=layer_idx, d_state=d_state, d_conv=d_conv, expand=expand)
     norm_cls = partial(
         nn.LayerNorm if not rms_norm else RMSNorm, eps=norm_epsilon
     )
     block = Block(
             d_model,
             mixer_cls,
+            mlp_cls=nn.Identity,
+            # mlp_cls = partial(
+            # GatedMLP, hidden_features=d_intermediate, out_features=d_model, **factory_kwargs
+            # )
             norm_cls=norm_cls,
             fused_add_norm=fused_add_norm,
             residual_in_fp32=residual_in_fp32,
             )
     block.layer_idx = layer_idx
     return block
+"""
 
 class MambaBlock(nn.Module):
     def __init__(self, in_channels, cfg):
         super(MambaBlock, self).__init__()
         n_layer = 1
-        self.forward_blocks  = nn.ModuleList( create_block(in_channels, cfg) for i in range(n_layer) )
-        self.backward_blocks = nn.ModuleList( create_block(in_channels, cfg) for i in range(n_layer) )
+        self.forward_blocks  = nn.ModuleList( create_block(
+            d_model=in_channels, 
+            d_intermediate=0,
+            ssm_cfg={
+                #"layer":"Mamba2", # "Mamba1", "Mamba2"
+                "layer":"Mamba1", # "Mamba1", "Mamba2"
+                "d_state": cfg['model_cfg']['d_state'],
+                "d_conv": cfg['model_cfg']['d_conv'],
+                "expand": cfg['model_cfg']['expand'],
+                },
+            attn_layer_idx=[],
+            attn_cfg=None,
+            #attn_cfg={
+            #   "num_heads": 8;
+            #},
+			norm_epsilon=1e-5,
+			rms_norm=True,
+			residual_in_fp32=False,
+			fused_add_norm=False,
+			layer_idx=i,
+			device=None,
+			dtype=None,
+            ) for i in range(n_layer) )
+
+        self.backward_blocks  = nn.ModuleList( create_block(
+            d_model=in_channels, 
+            d_intermediate=0,
+            ssm_cfg={
+                #"layer":"Mamba2", # "Mamba1", "Mamba2"
+                "layer":"Mamba1", # "Mamba1", "Mamba2"
+                "d_state": cfg['model_cfg']['d_state'],
+                "d_conv": cfg['model_cfg']['d_conv'],
+                "expand": cfg['model_cfg']['expand'],
+                },
+            attn_layer_idx=[],
+            attn_cfg=None,
+            #attn_cfg={
+            #   "num_heads": 8;
+            #},
+			norm_epsilon=1e-5,
+			rms_norm=True,
+			residual_in_fp32=False,
+			fused_add_norm=False,
+			layer_idx=i,
+			device=None,
+			dtype=None,
+            ) for i in range(n_layer) )
 
         self.apply(
             partial(
                 _init_weights,
                 n_layer=n_layer,
+                #**(initializer_cfg if initializer_cfg is not None else {}),
+                #n_residuals_per_layer=1 if d_intermediate == 0 else 2,  # 2 if we have MLP
+                n_residuals_per_layer=1 
             )
         )
 
