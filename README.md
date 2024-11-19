@@ -64,7 +64,14 @@ cd mamba_install
 pip install .
 ```
 
-Note: Installing from source (provided `mamba_install`) can help prevent package issues and ensure compatibility between different dependencies. It is recommended to follow these steps carefully to avoid potential conflicts.
+⚠️  Note: Installing from source (provided `mamba_install`) can help prevent package issues and ensure compatibility between different dependencies. It is recommended to follow these steps carefully to avoid potential conflicts.
+
+⚠️  Notice: If you encounter CUDA-related issues while you already have `CUDA>=12.0` and installed `pytorch 2.2.2`, you could try mamba 1.2.0.post1 instead of mamba 1.2.0 as follow:
+```bash
+cd mamba-1_2_0_post1
+pip install .
+```
+
 
 ## Training the Model
 ### Step 1: Prepare Dataset JSON
