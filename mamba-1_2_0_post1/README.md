@@ -1,3 +1,6 @@
+# This repository serves as a backup, cloned from the official Mamba Repository:
+https://github.com/state-spaces/mamba
+
 # Mamba
 
 ![Mamba](assets/selection.png "Selective State Space")
