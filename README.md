@@ -2,6 +2,13 @@
 This is the official implementation of the SEMamba paper.  
 For more details, please refer to: [An Investigation of Incorporating Mamba for Speech Enhancement](https://arxiv.org/abs/2405.06573)
 
+⚠️  Notice: If you encounter CUDA-related issues while using the Mamba-1 framework, we suggest using the Mamba-2 framework (available in the mamba-2 branch).  
+The Mamba-2 framework is designed to support both Mamba-1 and Mamba-2 model structures.
+
+```bash
+git checkout mamba-2
+```
+
 ## Requirement
     * Python >= 3.9
     * CUDA >= 12.0
