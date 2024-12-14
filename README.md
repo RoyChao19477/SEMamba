@@ -7,8 +7,19 @@ For more details, please refer to: [An Investigation of Incorporating Mamba for 
 ### NeurIPS 2024 competition : URGENT ( oral presentation )
 
 - A speech enhancement (SE) challenge aiming to build universal, robust, diverse, and generalizable SE models.
-- The challenge involves diverse distortions, including **additive noise**, **reverberation**, **clipping**, and **bandwidth limitations**, with **all types of sampling frequencies** supported by a single model.
-- Requires handling a large-scale dataset (~1.5 TB) and includes ranking based on **13 metrics** such as non-intrusive, intrusive, downstream-task-independent, downstream-task-dependent, and subjective SE metrics.
+- The challenge involves diverse distortions, including 
+    - **additive noise**, 
+    - **reverberation**, 
+    - **clipping**, and 
+    - **bandwidth limitations**,  
+    with **all types of sampling frequencies** supported by a single model.
+- Requires handling a large-scale dataset (~1.5 TB) and includes ranking based on **13 metrics** in classes of 
+    - non-intrusive, 
+    - intrusive, 
+    - downstream-task-independent, 
+    - downstream-task-dependent, and 
+    - subjective  
+    SE metrics.
 - Achieved **4th place** among 70 participating teams (>20 advanced to the final stage).
 - **Demo website** **[Live Demo Website](https://roychao19477.github.io/speech-enhancement-demo-2024/)**
 
