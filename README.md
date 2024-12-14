@@ -10,7 +10,7 @@ For more details, please refer to: [An Investigation of Incorporating Mamba for 
 - The challenge involves diverse distortions, including 
     - **additive noise**, 
     - **reverberation**, 
-    - **clipping**, and 
+    - **clipping**,
     - **bandwidth limitations**,  
 
     with **all types of sampling frequencies** supported by a single model.
@@ -18,7 +18,7 @@ For more details, please refer to: [An Investigation of Incorporating Mamba for 
     - non-intrusive, 
     - intrusive, 
     - downstream-task-independent, 
-    - downstream-task-dependent, and 
+    - downstream-task-dependent,
     - subjective  
 
     SE metrics.
