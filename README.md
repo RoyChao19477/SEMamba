@@ -2,6 +2,21 @@
 This is the official implementation of the SEMamba paper.  
 For more details, please refer to: [An Investigation of Incorporating Mamba for Speech Enhancement](https://arxiv.org/abs/2405.06573)
 
+---
+
+### Achievements, Demo, and Upcoming Presentation
+
+- **4th Place in URGENT Challenge 2024**:
+  SEMamba has achieved **4th place** in the **URGENT Challenge 2024**, demonstrating our dedication to advancing speech enhancement research and engineering. This result highlights the robustness and effectiveness of our methods under stringent evaluation standards.
+
+- **Live Demo Website**:
+  Experience SEMamba’s capabilities firsthand at our **[Live Demo Website](https://roychao19477.github.io/speech-enhancement-demo-2024/)**. Here, you can listen to enhanced audio samples, compare them with baseline results, and gain insight into the model’s real-world performance improvements.
+
+- **Oral Presentation at NeurIPS 2024 Workshop**:
+  We are honored to announce that SEMamba will be featured in an **oral presentation** at a **NeurIPS 2024** workshop. We look forward to engaging with the AI research community, gathering valuable feedback, and refining our approach further.
+
+---
+
 ⚠️  Notice: If you encounter CUDA-related issues while using the Mamba-1 framework, we suggest using the Mamba-2 framework (available in the mamba-2 branch).  
 The Mamba-2 framework is designed to support both Mamba-1 and Mamba-2 model structures.
 
