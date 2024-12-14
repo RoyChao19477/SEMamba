@@ -4,16 +4,13 @@ For more details, please refer to: [An Investigation of Incorporating Mamba for 
 
 ---
 
-### Achievements, Demo, and Upcoming Presentation
+### NeurIPS 2024 competition : URGENT ( oral presentation )
 
-- **4th Place in URGENT Challenge 2024**:
-  SEMamba has achieved **4th place** in the **URGENT Challenge 2024**, demonstrating our dedication to advancing speech enhancement research and engineering. This result highlights the robustness and effectiveness of our methods under stringent evaluation standards.
-
-- **Live Demo Website**:
-  Experience SEMamba’s capabilities firsthand at our **[Live Demo Website](https://roychao19477.github.io/speech-enhancement-demo-2024/)**. Here, you can listen to enhanced audio samples, compare them with baseline results, and gain insight into the model’s real-world performance improvements.
-
-- **Oral Presentation at NeurIPS 2024 Workshop**:
-  We are honored to announce that SEMamba will be featured in an **oral presentation** at a **NeurIPS 2024** workshop. We look forward to engaging with the AI research community, gathering valuable feedback, and refining our approach further.
+- A speech enhancement (SE) challenge aiming to build universal, robust, diverse, and generalizable SE models.
+- The challenge involves diverse distortions, including **additive noise**, **reverberation**, **clipping**, and **bandwidth limitations**, with **all types of sampling frequencies** supported by a single model.
+- Requires handling a large-scale dataset (~1.5 TB) and includes ranking based on **13 metrics** such as non-intrusive, intrusive, downstream-task-independent, downstream-task-dependent, and subjective SE metrics.
+- Achieved **4th place** among 70 participating teams (>20 advanced to the final stage).
+- **Demo website** **[Live Demo Website](https://roychao19477.github.io/speech-enhancement-demo-2024/)**
 
 ---
 
