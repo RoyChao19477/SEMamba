@@ -22,7 +22,7 @@ For more details, please refer to: [An Investigation of Incorporating Mamba for 
     - subjective  
 
     SE metrics.
-- Achieved **4th place** among 70 participating teams (>20 advanced to the final stage).
+- Achieved **4th place** among 70 participating teams (>20 teams joined to the final stage).
 - Deliver an oral presentation at the **NeurIPS** 2024 workshop, Vancouver, Canada.
 - **Demo website** **[Live Demo Website](https://roychao19477.github.io/speech-enhancement-demo-2024/)**
 
