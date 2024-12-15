@@ -4,7 +4,7 @@ For more details, please refer to: [An Investigation of Incorporating Mamba for 
 
 ---
 
-### NeurIPS 2024 competition : URGENT ( oral presentation )
+### NeurIPS 2024 competition : URGENT challenge 2024 ( oral presentation )
 
 - A speech enhancement (SE) challenge aiming to build universal, robust, diverse, and generalizable SE models.
 - The challenge involves diverse distortions, including 
