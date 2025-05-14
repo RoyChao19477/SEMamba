@@ -57,6 +57,7 @@ We provide pre-built Docker environments to simplify setup:
 
 
 ---
+
 ⚠️  Notice: If you encounter CUDA-related issues while using the Mamba-1 framework, we suggest using the Mamba-2 framework (available in the mamba-2 branch).  
 The Mamba-2 framework is designed to support both Mamba-1 and Mamba-2 model structures.
 
@@ -88,6 +89,8 @@ We have tested the ASR results using OpenAI Whisper on the test set of VoiceBank
 1. Ensure that both the `nvidia-smi` and `nvcc -V` commands show CUDA version 12.0 or higher to verify proper installation and compatibility.
 
 2. Currently, it supports only GPUs from the RTX series and newer models. Older GPU models, such as GTX 1080 Ti or Tesla V100, may not support the execution due to hardware limitations.
+
+---
 
 ## Installation
 ### (Suggested:) Step 0 - Create a Python environment with Conda
@@ -127,6 +130,8 @@ cd mamba-1_2_0_post1
 pip install .
 ```
 
+---
+
 
 ## Training the Model
 ### Step 1: Prepare Dataset JSON
@@ -144,6 +149,8 @@ sh run.sh
 Note: You can use `tensorboard --logdir exp/path_to_your_exp/logs` to check your training log   
 Note: If you would like to train SEMamba with the `pretrained_pesq_discriminator` weights, modify the `run.sh` to use the configuration: `--config recipes/SEMamba_advanced/SEMamba_advanced_pretrainedD.pth`.
 
+---
+
 ## Using the Pretrained Model
 
 Modify the `--input_folder` and `--output_folder` parameters in `pretrained.sh` to point to your desired input and output directories. Then, run the script.
@@ -152,7 +159,10 @@ Modify the `--input_folder` and `--output_folder` parameters in `pretrained.sh` 
 sh pretrained.sh
 ```
 
+---
+
 ## Implementing the PCS Method in SEMamba
+> (Updated May 14, 2025) Fix issue: inference.py not parsing bool values correctly
 There are two methods to implement the PCS (Perceptual Contrast Stretching) method in SEMamba:
 1. Use PCS as Training Target:
 - Run the `sh runPCS.sh` with the yaml configuration `use_PCS400=True`.
@@ -162,9 +172,10 @@ There are two methods to implement the PCS (Perceptual Contrast Stretching) meth
 - Run the `sh run.sh` with the yaml configuration `use_PCS400=False`.
 - Use the pretrained model `sh pretrained.sh` with post-processing `--post_processing_PCS True`.
 
+---
+
 ## Evaluation
 The evaluation metrics is calculated via: [CMGAN](https://github.com/ruizhecao96/CMGAN/blob/main/src/tools/compute_metrics.py)  
-> The evaluation code will be released in the future.
 
 ## Perceptual Contrast Stretching
 The implementation of Perceptual Contrast Stretching (PCS) as discussed in our paper can be found at [PCS400](https://github.com/RoyChao19477/PCS/tree/main/PCS400).
