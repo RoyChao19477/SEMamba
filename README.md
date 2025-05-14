@@ -113,6 +113,7 @@ sh run.sh
 ```
 
 Note: You can use `tensorboard --logdir exp/path_to_your_exp/logs` to check your training log
+Note: If you would like to train SEMamba with the `pretrained_pesq_discriminator` weights, modify the `run.sh` to use the configuration: `--config recipes/SEMamba_advanced/SEMamba_advanced_pretrainedD.pth`.
 
 ## Using the Pretrained Model
 

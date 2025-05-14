@@ -118,6 +118,10 @@ def train(rank, args, cfg):
         generator = DistributedDataParallel(generator, device_ids=[rank]).to(device)
         discriminator = DistributedDataParallel(discriminator, device_ids=[rank]).to(device)
 
+    if cfg['training_cfg'].get('use_pretrainedD', False):
+        discriminator.load_state_dict( torch.load('ckpts/pretrained_discriminator.pth') )
+        print("Loaded pretrained weight from ckpts/pretrained_discriminator.pth.")
+
     # Create optimizer and schedulers
     optimizers = setup_optimizers((generator, discriminator), cfg)
     load_optimizer_states(optimizers, state_dict_do)
