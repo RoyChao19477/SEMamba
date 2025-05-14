@@ -121,6 +121,7 @@ Navigate to the mamba_install directory and install the package. This step ensur
 cd mamba_install
 pip install .
 ```
+📌  Note: You might run `pip install numpy==1.26.4` after these to prevent unpredictable issues.  
 
 ⚠️  Note: Installing from source (provided `mamba_install`) can help prevent package issues and ensure compatibility between different dependencies. It is recommended to follow these steps carefully to avoid potential conflicts.
 
