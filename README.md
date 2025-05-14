@@ -35,7 +35,7 @@ If you already installed `mamba-ssm 2.2.x`, you can still run this repo with a f
 ### Steps to run:
 ```bash
 # Step 1: Copy local override
-cp -R mamba_install/mamba_ssm .
+cp -R mamba_install/mamba_ssm/ .
 
 # Step 2: Launch training
 sh run.sh
