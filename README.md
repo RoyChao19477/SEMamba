@@ -28,6 +28,35 @@ For more details, please refer to: [An Investigation of Incorporating Mamba for 
 
 ---
 
+## ✅ (Updated May 14) Now supports `mamba-ssm 2.2.x`
+
+If you already installed `mamba-ssm 2.2.x`, you can still run this repo with a few modifications:
+
+### Steps to run:
+```bash
+# Step 1: Copy local override
+cp -R mamba_install/mamba_ssm .
+
+# Step 2: Launch training
+sh run.sh
+```
+
+---
+
+### 🐳 Docker Support
+
+We provide pre-built Docker environments to simplify setup:
+
+1. **x86 systems**
+   Tested on A100, RTX 4090, and RTX 3090
+   👉 [Visit x86 Docker Repo](https://github.com/RoyChao19477/x86-semamba-docker)
+
+2. **ARM systems**
+   Tested on NVIDIA GH200
+   👉 [Visit GH200 Docker Repo](https://github.com/RoyChao19477/gh200-semamba-docker)
+
+
+---
 ⚠️  Notice: If you encounter CUDA-related issues while using the Mamba-1 framework, we suggest using the Mamba-2 framework (available in the mamba-2 branch).  
 The Mamba-2 framework is designed to support both Mamba-1 and Mamba-2 model structures.
 
