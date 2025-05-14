@@ -18,6 +18,16 @@ from utils.util import (
 h = None
 device = None
 
+def str2bool(v):
+    if isinstance(v, bool):
+        return v
+    if v.lower() in ('yes', 'true', 't', '1'):
+        return True
+    elif v.lower() in ('no', 'false', 'f', '0'):
+        return False
+    else:
+        raise argparse.ArgumentTypeError('Boolean value expected.')
+
 def inference(args, device):
     cfg = load_config(args.config)
     n_fft, hop_size, win_size = cfg['stft_cfg']['n_fft'], cfg['stft_cfg']['hop_size'], cfg['stft_cfg']['win_size']
@@ -71,7 +81,7 @@ def main():
     parser.add_argument('--output_folder', default='results')
     parser.add_argument('--config', default='results')
     parser.add_argument('--checkpoint_file', required=True)
-    parser.add_argument('--post_processing_PCS', default=False)
+    parser.add_argument('--post_processing_PCS', type=str2bool, default=False)
     args = parser.parse_args()
 
     global device
