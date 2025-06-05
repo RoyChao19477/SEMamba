@@ -34,12 +34,12 @@ For more details, please refer to: [An Investigation of Incorporating Mamba for 
 
 2. We now provide another model, `ckpts/vd.pth`, trained on both the VCTK-Demand and DNS-2020 corpora. The model achieves the following performance:
 
-| Dataset           | PESQ | CSIG | CBAK | COVL | SSNR  | STOI |
-|-------------------|------|------|------|------|-------|------|
-| DNS-2020          | 3.66 | 2.88 | 4.33 | 2.67 | 15.29 | 0.98 |
-| DNS-2020 w/PCS    | 3.70 | 2.87 | 3.45 | 2.67 |  1.29 | 0.98 |
-| VCTK-Demand       | 3.56 | 4.73 | 4.00 | 4.25 | 10.91 | 0.96 |
-| VCTK-Demand w/PCS | 3.75 | 4.76 | 3.67 | 4.37 |  4.31 | 0.96 |
+| Dataset           | PESQ | CSIG | CBAK | COVL | STOI |
+|-------------------|------|------|------|------|------|
+| DNS-2020          | 3.66 | 2.88 | 4.33 | 2.67 | 0.98 |
+| DNS-2020 w/PCS    | 3.70 | 2.87 | 3.45 | 2.67 | 0.98 |
+| VCTK-Demand       | 3.56 | 4.73 | 4.00 | 4.25 | 0.96 |
+| VCTK-Demand w/PCS | 3.75 | 4.76 | 3.67 | 4.37 | 0.96 |
 
 ---
 
