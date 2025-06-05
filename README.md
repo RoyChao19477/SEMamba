@@ -30,7 +30,7 @@ For more details, please refer to: [An Investigation of Incorporating Mamba for 
 
 ## ✅ (Updated June 3) Online Demo on HuggingFace
 
-1.  You can now upload or record audio directly on our Hugging Face demo [https://huggingface.co/spaces/rc19477/Speech_Enhancement_Mamba](https://huggingface.co/spaces/rc19477/Speech_Enhancement_Mamba) to experience real-time speech enhancement.
+1.  You can now upload or record audio directly on our Hugging Face demo [https://huggingface.co/spaces/rc19477/Speech_Enhancement_Mamba](https://huggingface.co/spaces/rc19477/Speech_Enhancement_Mamba) for speech enhancement.
 
 2. We now provide another model, `ckpts/vd.pth`, trained on both the VCTK-Demand and DNS-2020 corpora. The model achieves the following performance:
 
